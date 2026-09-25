@@ -58,6 +58,7 @@ body {
     radial-gradient(circle at 50% 40%, rgba(138, 240, 210, 0.14), transparent 28%),
     var(--bg-strong);
   transition: opacity 0.55s ease, visibility 0.55s ease;
+  animation: intro-screen-fallback 0.55s ease 3s forwards;
 }
 
 .intro-screen.is-hidden {
@@ -117,6 +118,10 @@ body {
 @keyframes intro-ring {
   0% { opacity: 0.8; transform: scale(0.92); }
   100% { opacity: 0; transform: scale(1.18); }
+}
+
+@keyframes intro-screen-fallback {
+  to { opacity: 0; visibility: hidden; pointer-events: none; }
 }
 
 body::before,

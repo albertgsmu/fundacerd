@@ -6,14 +6,16 @@ const hideIntroScreen = () => {
   }
 
   introScreen.classList.add('is-hidden');
-  introScreen.addEventListener('transitionend', () => {
-    introScreen.remove();
-  }, { once: true });
+  window.setTimeout(() => introScreen.remove(), 600);
 };
 
-window.addEventListener('load', () => {
-  window.setTimeout(hideIntroScreen, 900);
-});
+const scheduleIntroScreenDismissal = () => window.setTimeout(hideIntroScreen, 900);
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', scheduleIntroScreenDismissal, { once: true });
+} else {
+  scheduleIntroScreenDismissal();
+}
 
 const navToggle = document.querySelector('.nav-toggle');
 const nav = document.querySelector('.main-nav');
