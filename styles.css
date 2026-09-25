@@ -29,14 +29,17 @@
 
 html {
   scroll-behavior: smooth;
+  background-color: var(--bg-strong);
 }
 
 body {
   position: relative;
+  min-height: 100vh;
   font-family: "Manrope", sans-serif;
   color: var(--white);
   line-height: 1.6;
   overflow-x: hidden;
+  background-color: var(--bg);
   background:
     radial-gradient(circle at top left, rgba(138, 240, 210, 0.16), transparent 22%),
     radial-gradient(circle at bottom right, rgba(243, 198, 120, 0.16), transparent 26%),
@@ -702,6 +705,74 @@ p {
   transform: translateY(-6px);
   border-color: rgba(138,240,210,0.35);
   box-shadow: 0 28px 60px rgba(2,12,17,0.42);
+}
+
+.talent-card {
+  position: relative;
+  grid-column: 2;
+  border-color: rgba(243, 198, 120, 0.62);
+  background:
+    radial-gradient(circle at 88% 8%, rgba(243, 198, 120, 0.2), transparent 27%),
+    linear-gradient(180deg, rgba(29, 47, 53, 0.98), rgba(12, 27, 38, 0.98));
+  box-shadow: 0 24px 70px rgba(243, 198, 120, 0.12), var(--shadow);
+}
+
+.talent-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 30px 80px rgba(243, 198, 120, 0.2), var(--shadow);
+}
+
+.talent-ribbon {
+  position: absolute;
+  top: 0.85rem;
+  left: 1.35rem;
+  z-index: 2;
+  padding: 0.35rem 0.7rem;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 999px;
+  background: linear-gradient(135deg, #f3c678, #d99a35);
+  color: #18242a;
+  font-size: 0.62rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  box-shadow: 0 8px 18px rgba(2, 12, 17, 0.28);
+}
+
+.talent-icon {
+  background: linear-gradient(135deg, rgba(243, 198, 120, 0.35), rgba(243, 198, 120, 0.12));
+  border: 1px solid rgba(243, 198, 120, 0.55);
+  box-shadow: 0 0 0 7px rgba(243, 198, 120, 0.06);
+}
+
+.talent-heading {
+  padding: 0 1.35rem;
+}
+
+.talent-heading h3 {
+  padding: 0;
+}
+
+.talent-kicker {
+  margin-bottom: 0.35rem;
+  color: var(--accent);
+  font-size: 0.64rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.talent-card > p {
+  color: rgba(237, 250, 255, 0.78);
+}
+
+.talent-action {
+  color: var(--accent);
+  border-top-color: rgba(243, 198, 120, 0.28);
+}
+
+.talent-action:hover {
+  color: var(--white);
 }
 
 .icon-box {
@@ -1467,6 +1538,12 @@ p {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .talent-card {
+    grid-column: 1 / -1;
+    width: calc(50% - 0.75rem);
+    justify-self: center;
+  }
+
   .program-gallery-support {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
@@ -1514,6 +1591,11 @@ p {
 
   .hero {
     padding-top: 4rem;
+  }
+
+  .talent-card {
+    grid-column: auto;
+    width: auto;
   }
 
   .donation-wrap {
