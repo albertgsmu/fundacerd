@@ -111,6 +111,7 @@ const galleryModalNext = galleryModal?.querySelector('.gallery-modal-next');
 let activeGallery = [];
 let activeGalleryIndex = 0;
 let galleryTouchStartX = 0;
+let lastFocusedElement = null;
 
 const updateGalleryModal = () => {
   const image = activeGallery[activeGalleryIndex];
@@ -122,6 +123,10 @@ const updateGalleryModal = () => {
   galleryModalImage.alt = image.alt;
   galleryModalTitle.textContent = image.alt;
   galleryModalCounter.textContent = `${activeGalleryIndex + 1} / ${activeGallery.length}`;
+  const hasMultipleImages = activeGallery.length > 1;
+  galleryModalPrevious?.toggleAttribute('hidden', !hasMultipleImages);
+  galleryModalNext?.toggleAttribute('hidden', !hasMultipleImages);
+  galleryModalCounter.hidden = !hasMultipleImages;
 };
 
 const closeGalleryModal = () => {
@@ -129,9 +134,12 @@ const closeGalleryModal = () => {
     return;
   }
 
+  galleryModalClose?.[0]?.blur();
   galleryModal.classList.remove('is-open');
   galleryModal.setAttribute('aria-hidden', 'true');
   document.body.classList.remove('gallery-is-open');
+  lastFocusedElement?.focus();
+  lastFocusedElement = null;
 };
 
 document.querySelectorAll('main img').forEach((image) => {
@@ -148,6 +156,7 @@ document.querySelectorAll('main img').forEach((image) => {
   image.setAttribute('aria-label', `Ver imagen ${index + 1} de ${images.length}`);
 
   const openImage = () => {
+    lastFocusedElement = document.activeElement;
     activeGallery = images;
     activeGalleryIndex = index;
     updateGalleryModal();

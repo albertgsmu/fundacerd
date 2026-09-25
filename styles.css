@@ -913,6 +913,10 @@ p {
   transition: opacity 0.25s ease, visibility 0.25s ease;
 }
 
+.gallery-modal [hidden] {
+  display: none !important;
+}
+
 .gallery-modal.is-open {
   opacity: 1;
   visibility: visible;
