@@ -207,6 +207,16 @@ if (aboutCarousel) {
 }
 
 const revealItems = document.querySelectorAll('.reveal');
+const footer = document.querySelector('.site-footer');
+const whatsappFloat = document.querySelector('.whatsapp-float');
+
+if (footer && whatsappFloat && 'IntersectionObserver' in window) {
+  const footerObserver = new IntersectionObserver(([entry]) => {
+    whatsappFloat.classList.toggle('is-hidden', entry.isIntersecting);
+  });
+
+  footerObserver.observe(footer);
+}
 
 if ('IntersectionObserver' in window) {
   const observer = new IntersectionObserver(

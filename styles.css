@@ -2141,6 +2141,13 @@ p {
   animation: whatsapp-pulse 3s ease-out infinite;
 }
 
+.whatsapp-float.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(0.75rem);
+}
+
 .whatsapp-float:hover {
   transform: translateY(-4px);
   filter: brightness(1.06);
