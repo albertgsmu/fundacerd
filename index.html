@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
@@ -16,13 +16,13 @@
       media="print"
       onload="this.media='all'"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css?v=environmental-program-1" />
   </head>
   <body>
     <div class="intro-screen" id="intro-screen" role="status" aria-label="Cargando FUNDARCED">
       <div class="intro-mark">
         <span class="intro-ring"></span>
-        <img src="logo1.jpg" alt="" />
+        <img src="imagenes/logo1.jpg" alt="" />
       </div>
       <p class="intro-name">FUNDARCED</p>
       <p class="intro-tagline">Formación para la Vida</p>
@@ -30,24 +30,51 @@
 
     <header class="site-header">
       <div class="container nav-wrap">
-        <a href="#inicio" class="brand" aria-label="FUNDARCED — Inicio">
-          <img class="brand-logo" src="logo1.jpg" alt="Logo FUNDARCED" />
-          <span class="brand-text">FUNDARCED</span>
-        </a>
+        <div class="header-main-row">
+          <a href="#inicio" class="brand" aria-label="FUNDARCED — Inicio">
+            <img class="brand-logo" src="imagenes/logo1.jpg" alt="Logo FUNDARCED" />
+            <span class="brand-text">FUNDARCED</span>
+          </a>
 
-        <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+          <div class="header-tools">
+            <div class="social-icons header-social" aria-label="Redes sociales de FUNDARCED">
+              <a class="social-icon" href="https://youtube.com/@fundarced?si=0PySwGo0WeKTGahC" target="_blank" rel="noopener noreferrer" aria-label="YouTube de FUNDARCED" title="YouTube">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.2 3.6-6.2 3.6Z"/></svg>
+              </a>
+              <a class="social-icon" href="https://www.facebook.com/fundarced/" target="_blank" rel="noopener noreferrer" aria-label="Facebook de FUNDARCED" title="Facebook">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-8.2h2.8l.4-3.2h-3.2v-2c0-.9.3-1.6 1.6-1.6h1.7V3.1c-.3 0-1.4-.1-2.6-.1-2.6 0-4.4 1.6-4.4 4.5v2.1H7v3.2h2.8V21h3.7Z"/></svg>
+              </a>
+              <a class="social-icon" href="https://www.tiktok.com/@fundarced" target="_blank" rel="noopener noreferrer" aria-label="TikTok de FUNDARCED" title="TikTok">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.6 6.2a5.7 5.7 0 0 1-3.5-4.7V1h-3.8v14.8a2.9 2.9 0 1 1-2-2.8V9.1a6.8 6.8 0 1 0 5.8 6.7V8.3a9.4 9.4 0 0 0 5.5 1.8V6.3c-.7 0-1.4 0-2-.1Z"/></svg>
+              </a>
+              <a class="social-icon" href="https://www.instagram.com/fundarced/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de FUNDARCED" title="Instagram">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2.2A2.8 2.8 0 0 0 4.2 7v10A2.8 2.8 0 0 0 7 19.8h10a2.8 2.8 0 0 0 2.8-2.8V7A2.8 2.8 0 0 0 17 4.2H7Zm5 2.3a5.5 5.5 0 1 1 0 11 5.5 5.5 0 0 1 0-11Zm0 2.2a3.3 3.3 0 1 0 0 6.6 3.3 3.3 0 0 0 0-6.6Zm5.7-3.1a1.3 1.3 0 1 1 0 2.6 1.3 1.3 0 0 1 0-2.6Z"/></svg>
+              </a>
+            </div>
+
+            <label class="language-switcher">
+              <span class="language-switcher-label">Idioma</span>
+              <select id="language-select" aria-label="Seleccionar idioma">
+                <option value="auto">Auto</option>
+                <option value="es">ES</option>
+                <option value="en">EN</option>
+                <option value="fr">FR</option>
+              </select>
+            </label>
+
+            <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </div>
 
         <nav class="main-nav" aria-label="Navegación principal">
-          <a href="#inicio">Inicio</a>
           <a href="#nosotros">Nosotros</a>
           <a href="#programas">Programas</a>
-          <a href="#donde-estamos">Territorio</a>
+          <a href="#talentos">Talentos</a>
           <a href="#impacto">Impacto</a>
-          <a href="#videos">Videos</a>
           <a href="#donar">Donar</a>
           <a href="#contacto">Contacto</a>
           <a class="button button-primary nav-button" href="#contacto">Únete</a>
@@ -64,13 +91,12 @@
             <h1>Cambiamos realidades a partir de estrategias pedagógicas.</h1>
             <p class="lead">
               Somos una organización sin ánimo de lucro fundada en 2016. Trabajamos con
-              niños, niñas, adolescentes, mujeres, adultos y personas mayores de Usme y
-              Tocaimita para fortalecer sus habilidades sociales, deportivas, comunicativas
+              niños, niñas, adolescentes, mujeres, adultos y personas mayores de Usme para fortalecer sus habilidades sociales, deportivas, comunicativas
               y artísticas.
             </p>
 
             <div class="badge-row">
-              <span>Usme y Tocaimita</span>
+              <span>Usme</span>
               <span>Desde 2016</span>
               <span>Trabajo comunitario</span>
             </div>
@@ -94,7 +120,7 @@
               <span class="hero-glow" aria-hidden="true"></span>
               <img
                 class="main-image hero-logo-image"
-                src="logo1.jpg"
+                src="imagenes/logo1.jpg"
                 alt="Logo de FUNDARCED, Formación para la Vida"
               />
               <div class="floating-card card-top">
@@ -122,7 +148,7 @@
             <span>áreas de transformación</span>
           </div>
           <div class="stat-item">
-            <strong>2</strong>
+            <strong>1</strong>
             <span>territorios de acción</span>
           </div>
           <div class="stat-item">
@@ -139,11 +165,32 @@
         </div>
 
         <div class="container about-grid">
-          <div class="about-image reveal">
-            <img
-              src="quien.jpg"
-              alt="Equipo de FUNDARCED reunido junto a su bandera institucional"
-            />
+          <div class="about-image reveal" data-about-carousel role="region" aria-roledescription="carrusel" aria-label="Fotos de la comunidad FUNDARCED">
+            <div class="about-carousel-track">
+              <figure class="about-slide is-active">
+                <img src="imagenes/quien.jpg" alt="Equipo de FUNDARCED reunido junto a su bandera institucional" />
+                <figcaption><span>Somos comunidad</span><strong>Unidos por la formación para la vida</strong></figcaption>
+              </figure>
+              <figure class="about-slide">
+                <img src="imagenes/deporte.jpg" alt="Participantes de FUNDARCED en una actividad deportiva comunitaria" loading="lazy" />
+                <figcaption><span>Crecer en equipo</span><strong>El deporte también construye comunidad</strong></figcaption>
+              </figure>
+              <figure class="about-slide">
+                <img src="imagenes/arte.jpg" alt="Participantes de FUNDARCED en una actividad artística" loading="lazy" />
+                <figcaption><span>Expresar y crear</span><strong>Arte y cultura para encontrarnos</strong></figcaption>
+              </figure>
+              <!-- Para sumar una foto manual: duplica un about-slide. Las fotos de las galerías de programas se agregan solas. -->
+            </div>
+            <div class="about-carousel-controls">
+              <button class="about-carousel-arrow" type="button" data-about-prev aria-label="Foto anterior">←</button>
+              <div class="about-carousel-status" aria-live="polite">
+                <span data-about-count>01 / 03</span>
+                <span class="about-carousel-progress" role="progressbar" aria-label="Progreso de fotos" aria-valuemin="1" aria-valuemax="3" aria-valuenow="1">
+                  <span data-about-progress></span>
+                </span>
+              </div>
+              <button class="about-carousel-arrow" type="button" data-about-next aria-label="Foto siguiente">→</button>
+            </div>
           </div>
 
           <div class="about-copy reveal">
@@ -198,7 +245,7 @@
           </div>
           <div class="territory-media">
             <img
-              src="usme.jpg"
+              src="imagenes/usme.jpg"
               alt="Ilustración de Usme, Bogotá, con el logo de FUNDARCED"
             />
           </div>
@@ -218,126 +265,264 @@
         <div class="container cards-grid">
           <article class="info-card reveal">
             <div class="icon-box green">⚽</div>
-            <h3>Deporte</h3>
-            <p>Actividades físicas, convivencia, disciplina y bienestar para niños, jóvenes y familias.</p>
+            <h3>Deporte y Formación Integral</h3>
+            <p>El programa de Deporte y Formación Integral promueve el desarrollo de niños, niñas, jóvenes y comunidad a través del fútbol y el futsal. Más allá de la práctica deportiva, Fundarced entiende el deporte como una herramienta de transformación social, fortaleciendo valores, disciplina, hábitos saludables, trabajo en equipo y construcción de proyectos de vida. Nuestra metodología busca generar procesos formativos de calidad que permitan desarrollar el talento, fortalecer las capacidades individuales y colectivas y crear oportunidades de proyección deportiva, educativa y personal.</p>
             <div class="program-gallery" aria-label="Galería del programa Deporte">
-              <img src="deporte.jpg" alt="Actividad deportiva de FUNDARCED" loading="lazy" />
-              <img src="deporte1.jpg" alt="Entrenamiento deportivo comunitario" loading="lazy" />
-              <img src="deporte3.jpg" alt="Participantes en jornada deportiva" loading="lazy" />
-              <img src="deporte4.png" alt="Encuentro de fútbol de FUNDARCED" loading="lazy" />
-              <img src="deporte5.png" alt="Jóvenes participando en deporte" loading="lazy" />
+              <img src="imagenes/deporte5.png" alt="Jóvenes participando en deporte" loading="lazy" />
+              <img src="imagenes/deporte6.jpeg" alt="Participantes en una actividad deportiva de FUNDARCED" loading="lazy" />
+              <img src="imagenes/deporte7.jpeg" alt="Jornada deportiva de la comunidad" loading="lazy" />
+              <img src="imagenes/deporte8.jpeg" alt="Entrenamiento deportivo comunitario" loading="lazy" />
+              <img src="imagenes/deporte9.jpeg" alt="Jóvenes participando en una actividad deportiva" loading="lazy" />
+              <img src="imagenes/deporte10.jpeg" alt="Encuentro deportivo de FUNDARCED" loading="lazy" />
+              <img src="imagenes/deporte11.jpeg" alt="Actividad de fútbol y formación integral" loading="lazy" />
+              <img src="imagenes/deporte12.jpeg" alt="Participantes de FUNDARCED en la cancha" loading="lazy" />
+              <img src="imagenes/deporte13.jpeg" alt="Jóvenes en una actividad deportiva de FUNDARCED" loading="lazy" />
+              <img src="imagenes/deporte14.jpeg" alt="Participantes en entrenamiento deportivo" loading="lazy" />
+              <img src="imagenes/deporte15.jpeg" alt="Encuentro de formación deportiva" loading="lazy" />
+              <img src="imagenes/formacion5.jpg" alt="Encuentro de formación deportiva" loading="lazy" />
+            
             </div>
-            <a class="program-action" href="https://api.whatsapp.com/send?phone=573156163391&amp;text=Hola%20FUNDARCED%2C%20me%20interesa%20el%20programa%20Deporte." target="_blank" rel="noopener">Me interesa este programa <span aria-hidden="true">↗</span></a>
-          </article>
-
-          <article class="info-card reveal">
-            <div class="icon-box orange">📚</div>
-            <h3>Formación</h3>
-            <p>Talleres y acompañamiento para fortalecer habilidades, valores y oportunidades.</p>
-            <div class="program-gallery" aria-label="Galería del programa Formación">
-              <img src="formacion.png" alt="Actividad de formación de FUNDARCED" loading="lazy" />
-              <img src="formacion1.png" alt="Participantes en proceso formativo" loading="lazy" />
-              <img src="formacion2.png" alt="Taller de formación comunitaria" loading="lazy" />
-              <img src="formacion3.jpg" alt="Jornada educativa de FUNDARCED" loading="lazy" />
-              <img src="formacion4.jpg" alt="Acompañamiento formativo" loading="lazy" />
-              <img src="formacion5.jpg" alt="Personas participando en formación" loading="lazy" />
-            </div>
-            <a class="program-action" href="https://api.whatsapp.com/send?phone=573156163391&amp;text=Hola%20FUNDARCED%2C%20me%20interesa%20el%20programa%20Formaci%C3%B3n." target="_blank" rel="noopener">Me interesa este programa <span aria-hidden="true">↗</span></a>
-          </article>
-
-          <article class="info-card reveal">
-            <div class="icon-box blue">🎉</div>
-            <h3>Recreación</h3>
-            <p>Espacios creativos y divertidos que impulsan la expresión, la identidad y la alegría.</p>
-            <div class="program-gallery" aria-label="Galería del programa Recreación">
-              <img src="recreacion.jpg" alt="Actividad recreativa de FUNDARCED" loading="lazy" />
-              <img src="recreacion1.jpg" alt="Juego comunitario" loading="lazy" />
-              <img src="recreacion2.jpg" alt="Participantes en actividad recreativa" loading="lazy" />
-              <img src="recreacion3.jpg" alt="Jornada de integración comunitaria" loading="lazy" />
-              <img src="recreacion4.jpg" alt="Recreación para niños y jóvenes" loading="lazy" />
-              <img src="recreacion5.jpg" alt="Encuentro recreativo de FUNDARCED" loading="lazy" />
-            </div>
-            <a class="program-action" href="https://api.whatsapp.com/send?phone=573156163391&amp;text=Hola%20FUNDARCED%2C%20me%20interesa%20el%20programa%20Recreaci%C3%B3n." target="_blank" rel="noopener">Me interesa este programa <span aria-hidden="true">↗</span></a>
-          </article>
-
-          <article class="info-card reveal">
-            <div class="icon-box purple">🏘️</div>
-            <h3>Arte y cultura</h3>
-            <p>Música, danzas y literatura para fortalecer la identidad, la expresión y el sentido de pertenencia.</p>
-            <div class="program-gallery" aria-label="Galería del programa Arte y cultura">
-              <img src="arte.jpg" alt="Actividad artística de FUNDARCED" loading="lazy" />
-              <img src="arte1.jpg" alt="Expresión cultural comunitaria" loading="lazy" />
-              <img src="arte3.jpg" alt="Presentación artística" loading="lazy" />
-              <img src="arte4.jpg" alt="Participantes en actividad cultural" loading="lazy" />
-              <img src="arte5.jpg" alt="Encuentro de arte y cultura" loading="lazy" />
-            </div>
-            <a class="program-action" href="https://api.whatsapp.com/send?phone=573156163391&amp;text=Hola%20FUNDARCED%2C%20me%20interesa%20el%20programa%20Arte%20y%20cultura." target="_blank" rel="noopener">Me interesa este programa <span aria-hidden="true">↗</span></a>
+            <a class="program-action" data-i18n-wa="program-sports" href="https://api.whatsapp.com/send?phone=573156163391&amp;text=Hola%20FUNDARCED%2C%20me%20interesa%20el%20programa%20Deporte." target="_blank" rel="noopener">Me interesa este programa <span aria-hidden="true">↗</span></a>
           </article>
 
           <article class="info-card reveal">
             <div class="icon-box orange">🤝</div>
-            <h3>Apoyo solidario</h3>
+            <h3>Gestión y Apoyo Solidario</h3>
             <p>
-              Ejercicio solidario realizado en <strong>Quibdó, Colombia</strong>, para
-              acompañar a las familias afectadas por el terremoto. Esta acción fue
-              articulada con diferentes organizaciones deportivas de Bogotá, entre ellas
-              <strong>Chombo FC</strong>, y con el colectivo social <strong>Los Portu</strong>.
+              El programa de Gestión y Apoyo Solidario articula esfuerzos comunitarios, institucionales y privados para acompañar a poblaciones y familias que enfrentan situaciones de vulnerabilidad o emergencia. A través de campañas solidarias, recolección y entrega de mercados, donaciones, gestión de recursos y ayudas humanitarias, Fundarced moviliza redes de cooperación que permiten responder de manera organizada a las necesidades de los territorios. Estas acciones trascienden nuestro entorno inmediato y nos han permitido participar en iniciativas humanitarias en otras regiones del país, reafirmando que la solidaridad y el trabajo colectivo también son herramientas para transformar realidades.
             </p>
             <div class="program-gallery program-gallery-support" aria-label="Galería del apoyo solidario en Quibdó">
-              <img src="apoyo.jpeg" alt="Apoyo solidario en Quibdó, Colombia" loading="lazy" />
-              <img src="apoyo1.jpeg" alt="Familias beneficiarias del apoyo en Quibdó" loading="lazy" />
-              <img src="apoyo2.jpeg" alt="Entrega de ayudas en Quibdó" loading="lazy" />
-              <img src="apoyo3.jpeg" alt="Jornada solidaria de FUNDARCED" loading="lazy" />
-              <img src="apoyo4.jpeg" alt="Voluntariado durante la jornada de apoyo" loading="lazy" />
-              <img src="apoyo5.jpeg" alt="Ayudas organizadas para la comunidad" loading="lazy" />
-              <img src="apoyo6.jpeg" alt="Comunidad de Quibdó recibiendo apoyo" loading="lazy" />
-              <img src="apoyo7.jpeg" alt="Entrega comunitaria de donaciones" loading="lazy" />
-              <img src="apoyo8.jpeg" alt="Acompañamiento a familias afectadas" loading="lazy" />
+              <img src="imagenes/apoyo.jpeg" alt="Apoyo solidario en Quibdó, Colombia" loading="lazy" />
+              <img src="imagenes/apoyo1.jpeg" alt="Familias beneficiarias del apoyo en Quibdó" loading="lazy" />
+              <img src="imagenes/apoyo2.jpeg" alt="Entrega de ayudas en Quibdó" loading="lazy" />
+              <img src="imagenes/apoyo3.jpeg" alt="Jornada solidaria de FUNDARCED" loading="lazy" />
+              <img src="imagenes/apoyo4.jpeg" alt="Voluntariado durante la jornada de apoyo" loading="lazy" />
+              <img src="imagenes/apoyo5.jpeg" alt="Ayudas organizadas para la comunidad" loading="lazy" />
+              <img src="imagenes/apoyo6.jpeg" alt="Comunidad de Quibdó recibiendo apoyo" loading="lazy" />
+              <img src="imagenes/apoyo7.jpeg" alt="Entrega comunitaria de donaciones" loading="lazy" />
+              <img src="imagenes/apoyo8.jpeg" alt="Acompañamiento a familias afectadas" loading="lazy" />
+              <img src="imagenes/apoyo9.jpg" alt="Jornada de apoyo solidario" loading="lazy" />
+              <img src="imagenes/apoyo10.jpeg" alt="Entrega de apoyo a la comunidad" loading="lazy" />
+              <img src="imagenes/apoyo11.jpeg" alt="Voluntariado en actividad solidaria" loading="lazy" />
+              <img src="imagenes/apoyo12.jpeg" alt="Acompañamiento solidario a familias" loading="lazy" />
+              <img src="imagenes/apoyo13.jpeg" alt="Regalo para niños" loading="lazy" />
+              <img src="imagenes/apoyo14.jpeg" alt="Jornada de apoyo solidario" loading="lazy" />
+              <img src="imagenes/apoyo15.jpeg" alt="Entrega de ayudas a la comunidad" loading="lazy" />
+              <img src="imagenes/apoyo16.jpeg" alt="Acompañamiento a familias de la comunidad" loading="lazy" />
+              <img src="imagenes/apoyo17.jpeg" alt="Actividad de apoyo solidario de FUNDARCED" loading="lazy" />
             </div>
-            <a class="program-action" href="https://api.whatsapp.com/send?phone=573156163391&amp;text=Hola%20FUNDARCED%2C%20me%20interesa%20el%20programa%20Apoyo%20solidario." target="_blank" rel="noopener">Me interesa este programa <span aria-hidden="true">↗</span></a>
+            <a class="program-action" data-i18n-wa="program-support" href="https://api.whatsapp.com/send?phone=573156163391&amp;text=Hola%20FUNDARCED%2C%20me%20interesa%20el%20programa%20Apoyo%20solidario." target="_blank" rel="noopener">Me interesa este programa <span aria-hidden="true">↗</span></a>
+          </article>
+
+          <article class="info-card reveal">
+            <div class="icon-box purple">🏘️</div>
+            <h3>Arte, Cultura e Identidad.</h3>
+            <p>El programa de Arte, Cultura e Identidad genera espacios de formación, expresión y reconocimiento de nuestras raíces mediante la danza y otras manifestaciones artísticas y culturales. A través de procesos formativos y presentaciones comunitarias, promovemos el rescate y apropiación del folclor, las tradiciones y la diversidad cultural colombiana. Buscamos que niñas, jóvenes y comunidad encuentren en el arte un escenario para fortalecer su identidad, desarrollar habilidades, expresarse libremente y reconocer el patrimonio cultural como parte fundamental de la construcción social.</p>
+            <div class="program-gallery" aria-label="Galería del programa Arte y cultura">
+              <img src="imagenes/arte.jpg" alt="Actividad artística de FUNDARCED" loading="lazy" />
+              <img src="imagenes/arte1.jpg" alt="Expresión cultural comunitaria" loading="lazy" />
+              <img src="imagenes/arte2.jpg" alt="Presentación artística" loading="lazy" />
+              <img src="imagenes/arte4.jpg" alt="Participantes en actividad cultural" loading="lazy" />
+              <img src="imagenes/arte5.jpg" alt="Encuentro de arte y cultura" loading="lazy" />
+              <img src="imagenes/arte6.jpg" alt="Presentacion a la musica Colombiana" loading="lazy" />
+              <img src="imagenes/arte7.jpeg" alt="Actividad artística y cultural de FUNDARCED" loading="lazy" />
+              <img src="imagenes/arte8.jpeg" alt="Participantes en una actividad cultural" loading="lazy" />
+              <img src="imagenes/arte9.jpeg" alt="Encuentro de arte e identidad" loading="lazy" />
+              <img src="imagenes/arte10.jpeg" alt="Expresión artística de la comunidad" loading="lazy" />
+              <img src="imagenes/arte11.jpeg" alt="Jornada cultural de FUNDARCED" loading="lazy" />
+              <img src="imagenes/arte12.jpeg" alt="Participantes en una presentación cultural" loading="lazy" />
+            </div>
+            <a class="program-action" data-i18n-wa="program-arts" href="https://api.whatsapp.com/send?phone=573156163391&amp;text=Hola%20FUNDARCED%2C%20me%20interesa%20el%20programa%20Arte%20y%20cultura." target="_blank" rel="noopener">Me interesa este programa <span aria-hidden="true">↗</span></a>
           </article>
 
           <article class="info-card reveal">
             <div class="icon-box blue">👵</div>
-            <h3>Bienestar mayor</h3>
-            <p>Actividad física adaptada, recreación y encuentros para promover bienestar e integración.</p>
+            <h3>Acompañamiento Integral a la Persona Mayor</h3>
+            <p>El programa de Acompañamiento Integral a la Persona Mayor promueve un envejecimiento activo, participativo y saludable mediante actividad física y recreación. Desarrollamos jornadas divertidas y educativas donde el medio ambiente y las experiencias pedagógicas fortalecen el bienestar físico, emocional y social. Fundarced reconoce a las personas mayores como protagonistas de sus comunidades, valorando sus experiencias, conocimientos y saberes y generando escenarios que mejoran su autonomía, participación, vínculos sociales y calidad de vida.</p>
             <div class="program-gallery" aria-label="Galería del programa Bienestar mayor">
-              <img src="mayor.jpg" alt="Actividad física para personas mayores" loading="lazy" />
-              <img src="mayor1.jpg" alt="Encuentro de personas mayores" loading="lazy" />
-              <img src="mayor2.jpg" alt="Recreación para personas mayores" loading="lazy" />
-              <img src="mayor3.jpg" alt="Actividad comunitaria para personas mayores" loading="lazy" />
-              <img src="mayor4.png" alt="Ejercicio adaptado para personas mayores" loading="lazy" />
-              <img src="mayor5.jpg" alt="Integración de personas mayores" loading="lazy" />
+              <img src="imagenes/mayor.jpg" alt="Actividad física para personas mayores" loading="lazy" />
+              <img src="imagenes/mayor1.jpg" alt="Encuentro de personas mayores" loading="lazy" />
+              <img src="imagenes/mayor2.jpg" alt="Recreación para personas mayores" loading="lazy" />
+              <img src="imagenes/mayor3.jpg" alt="Actividad comunitaria para personas mayores" loading="lazy" />
+              <img src="imagenes/mayor4.png" alt="Ejercicio adaptado para personas mayores" loading="lazy" />
+              <img src="imagenes/mayor5.jpg" alt="Integración de personas mayores" loading="lazy" />
+              <img src="imagenes/mayor6.jpg" alt="Juegos didacticos" loading="lazy" />
+              <img src="imagenes/mayor7.jpg" alt="Despertando la mente de personas mayores con juegos" loading="lazy" />
+              <img src="imagenes/mayor8.jpg" alt="Pasando tiempo y compañamiento con los mayores." loading="lazy" />
+              <img src="imagenes/mayor9.jpeg" alt="Actividad de integración para personas mayores" loading="lazy" />
+              <img src="imagenes/mayor10.jpeg" alt="Jornada recreativa con personas mayores" loading="lazy" />
+              <img src="imagenes/mayor11.jpeg" alt="Encuentro comunitario de personas mayores" loading="lazy" />
+              <img src="imagenes/mayor12.jpeg" alt="Actividad de bienestar para personas mayores" loading="lazy" />
             </div>
-            <a class="program-action" href="https://api.whatsapp.com/send?phone=573156163391&amp;text=Hola%20FUNDARCED%2C%20me%20interesa%20el%20programa%20Bienestar%20mayor." target="_blank" rel="noopener">Me interesa este programa <span aria-hidden="true">↗</span></a>
+            <a class="program-action" data-i18n-wa="program-older-adults" href="https://api.whatsapp.com/send?phone=573156163391&amp;text=Hola%20FUNDARCED%2C%20me%20interesa%20el%20programa%20Bienestar%20mayor." target="_blank" rel="noopener">Me interesa este programa <span aria-hidden="true">↗</span></a>
           </article>
 
-          <article class="info-card talent-card reveal">
-            <span class="talent-ribbon">Programa premium</span>
+          <article class="info-card reveal">
+            <div class="icon-box blue">🎉</div>
+            <h3>Literatura y Creación</h3>
+            <p>El programa de Literatura y Creación busca acercar a niños, jóvenes, adultos y personas mayores al universo de la palabra, promoviendo la lectura, la escritura y la construcción de narrativas como herramientas de expresión y transformación. Mediante la creación de cuentos, relatos, historias comunitarias, ejercicios de lectura y espacios de creación colectiva, incentivamos la imaginación, el pensamiento crítico y el reconocimiento de las experiencias del territorio. La literatura se convierte así en una oportunidad para preservar la memoria comunitaria y fortalecer el vínculo de las personas con la educación y la cultura.</p>
+            <div class="program-gallery" aria-label="Galería del programa Recreación">
+              <img src="imagenes/recreacion.jpg" alt="Actividad recreativa de FUNDARCED" loading="lazy" />
+              <img src="imagenes/formacion2.png" alt="Participantes en actividad recreativa" loading="lazy" />
+              <img src="imagenes/formacion10.jpeg" alt="Jornada de integración comunitaria" loading="lazy" />
+              <img src="imagenes/formacion9.jpeg" alt="Recreación para niños y jóvenes" loading="lazy" />
+              <img src="imagenes/formacion6.jpg" alt="Encuentro recreativo de FUNDARCED" loading="lazy" />
+              <img src="imagenes/formacion7.jpg" alt="Aprendizaje sobre el deporte y comportamientos en la cancha" loading="lazy" />
+              <img src="imagenes/formacion8.jpeg" alt="Actividad de formación para la vida" loading="lazy" />
+              </div>
+            <a class="program-action" data-i18n-wa="program-literature" href="https://api.whatsapp.com/send?phone=573156163391&amp;text=Hola%20FUNDARCED%2C%20me%20interesa%20el%20programa%20Recreaci%C3%B3n." target="_blank" rel="noopener">Me interesa este programa <span aria-hidden="true">↗</span></a>
+          </article>
+
+          <article class="info-card reveal environmental-program">
+            <div class="icon-box green" aria-hidden="true">🌱</div>
+            <h3>Educación Ambiental</h3>
+            <p class="environmental-tagline">Formamos personas que también aprenden a cuidar el lugar que habitan.</p>
+            <p>La Educación Ambiental es un eje transversal de Fundarced que acompaña nuestros diferentes programas y fortalece el compromiso de niños, niñas, jóvenes, familias y comunidad con el cuidado de su entorno. Entendemos que formar para la vida también significa aprender a relacionarnos responsablemente con el territorio que compartimos; por eso, llevamos la educación ambiental más allá del discurso y la convertimos en experiencias que permiten conocer, recorrer, cuidar y transformar nuestros espacios.</p>
+            <p>A través de salidas pedagógicas con enfoque socioambiental, talleres de separación y aprovechamiento de residuos, actividades de reciclaje, jornadas de limpieza y recuperación de zonas verdes y experiencias educativas en contacto con la naturaleza, promovemos una conciencia ambiental construida desde la acción. Estas iniciativas se desarrollan especialmente en los entornos donde tienen presencia nuestros programas, fortaleciendo en la comunidad el sentido de pertenencia y la corresponsabilidad sobre parques, escenarios deportivos, zonas verdes y demás espacios colectivos.</p>
+            <p>Para Fundarced, no basta con llegar a un territorio y desarrollar una actividad: queremos dejar una relación más consciente entre las personas y el lugar que habitan. Por eso vinculamos la dimensión social con la ambiental, entendiendo que el bienestar de una comunidad también depende de la manera en que reconoce, protege y se apropia responsablemente de su entorno. Así, cada recorrido, cada residuo correctamente separado y cada espacio recuperado se convierte en una oportunidad educativa.</p>
+            <p>Educamos para transformar personas, pero también para aprender juntos a cuidar el territorio que hace posible esa transformación.</p>
+            <div class="program-gallery environmental-gallery" aria-label="Galería del programa Educación Ambiental">
+              <img src="imagenes/ambiente.jpeg" alt="Actividad de educación ambiental de FUNDARCED" loading="lazy" />
+              <img src="imagenes/ambiente1.jpeg" alt="Participantes aprendiendo sobre el cuidado del entorno" loading="lazy" />
+              <img src="imagenes/ambiente2.jpeg" alt="Jornada ambiental de la comunidad" loading="lazy" />
+              <img src="imagenes/ambiente3.jpeg" alt="Experiencia educativa en contacto con la naturaleza" loading="lazy" />
+              <img src="imagenes/ambiente4.jpeg" alt="Actividad comunitaria de cuidado ambiental" loading="lazy" />
+              <img src="imagenes/ambiente5.jpeg" alt="Participantes de FUNDARCED cuidando su territorio" loading="lazy" />
+              <!-- Agrega aquí tus 7 fotos: copia la línea de ejemplo y cambia el nombre del archivo y su descripción.
+              <img src="imagenes/educacion-ambiental-1.jpg" alt="Actividad de educación ambiental de FUNDARCED" loading="lazy" />
+              <img src="imagenes/educacion-ambiental-2.jpg" alt="Actividad de educación ambiental de FUNDARCED" loading="lazy" />
+              <img src="imagenes/educacion-ambiental-3.jpg" alt="Actividad de educación ambiental de FUNDARCED" loading="lazy" />
+              <img src="imagenes/educacion-ambiental-4.jpg" alt="Actividad de educación ambiental de FUNDARCED" loading="lazy" />
+              <img src="imagenes/educacion-ambiental-5.jpg" alt="Actividad de educación ambiental de FUNDARCED" loading="lazy" />
+              <img src="imagenes/educacion-ambiental-6.jpg" alt="Actividad de educación ambiental de FUNDARCED" loading="lazy" />
+              <img src="imagenes/educacion-ambiental-7.jpg" alt="Actividad de educación ambiental de FUNDARCED" loading="lazy" />
+              -->
+            </div>
+            <a class="program-action" data-i18n-wa="program-environment" href="https://api.whatsapp.com/send?phone=573156163391&amp;text=Hola%20FUNDARCED%2C%20me%20interesa%20el%20programa%20Educaci%C3%B3n%20Ambiental." target="_blank" rel="noopener">Me interesa este programa <span aria-hidden="true">↗</span></a>
+          </article>
+
+          <article class="info-card talent-card reveal" id="talentos">
             <div class="icon-box talent-icon">🏆</div>
             <div class="talent-heading">
               <p class="talent-kicker">Selección · Proyección · Alto rendimiento</p>
-              <h3>Talentos FUNDARCED</h3>
+              <h3>TALENTOS FUNDARCED🏆</h3>
             </div>
             <p>
-              El espacio para quienes demuestran constancia, compromiso y pasión por
-              superarse. A través de convenios con grandes equipos, nuestros talentos
-              pueden acceder a becas y vivir una experiencia deportiva competitiva con
-              proyección al más alto nivel profesional.
+              Para quienes se atreven a seguir soñando.
+
+Talentos Fundarced es nuestro programa de proyección deportiva, creado para niños, niñas y jóvenes que han demostrado que su sueño merece seguir siendo acompañado. Es un espacio de selección y fortalecimiento al que llegan deportistas que, por su cumplimiento, rendimiento, disciplina, disposición, valores y compromiso con el proceso, son identificados por nuestros profesores para continuar un camino de mayor exigencia
+
+Aquí entendemos que el talento por sí solo no es suficiente. Por eso acompañamos a nuestros deportistas para que conviertan sus capacidades en oportunidades reales, fortaleciendo su preparación deportiva, su mentalidad y su proyecto de vida. Hoy, este proceso se refleja en jóvenes que han alcanzado escenarios de representación nacional y en deportistas que avanzan dentro de estructuras profesionales, demostrando que desde nuestros territorios también es posible construir caminos hacia el alto rendimiento.
+
+Pero Talentos Fundarced es mucho más que llegar a una selección o convertirse en deportista profesional. Es aprender a persistir cuando el camino se hace difícil; entender que cada entrenamiento, cada sacrificio y cada oportunidad hacen parte de una experiencia que forma para la vida. Queremos acompañar especialmente a quienes, aun con las dificultades de su contexto, no están dispuestos a dejar de creer en lo que pueden llegar a ser.
+
+Talentos Fundarced: porque hay sueños que, cuando encuentran disciplina, formación y una oportunidad, pueden convertirse en realidad.
             </p>
-            <div class="program-gallery" aria-label="Galería del programa Talentos FUNDARCED">
-              <img src="talento1.jpg" alt="Talento deportivo de FUNDARCED" loading="lazy" />
-              <img src="talento2.jpg" alt="Participante del programa Talentos FUNDARCED" loading="lazy" />
-              <img src="talento3.jpg" alt="Experiencia deportiva de un talento FUNDARCED" loading="lazy" />
-              <img src="talento4.jpg" alt="Talentos FUNDARCED en proceso competitivo" loading="lazy" />
-              <img src="talento5.jpg" alt="Joven talento deportivo de FUNDARCED" loading="lazy" />
-              <img src="talento6.jpeg" alt="Talento FUNDARCED en entrenamiento deportivo" loading="lazy" />
-              <img src="talento7.jpeg" alt="Participación competitiva de Talentos FUNDARCED" loading="lazy" />
-              <img src="talento8.jpeg" alt="Jóvenes talentos deportivos de FUNDARCED" loading="lazy" />
-              <img src="talento9.jpeg" alt="Proceso de formación de un talento FUNDARCED" loading="lazy" />
-              <img src="talento10.jpeg" alt="Experiencia deportiva competitiva de FUNDARCED" loading="lazy" />
+<section class="talent-stories" aria-labelledby="talent-stories-title">
+  <div class="talent-stories-heading">
+    <p class="talent-kicker">PERSONAS · SUEÑOS · CAMINOS</p>
+    <h4 id="talent-stories-title">Historias que inspiran</h4>
+    <p>
+      Cada deportista tiene un camino único. Aquí podrás conocer sus comienzos,
+      aprendizajes y sueños cuando compartamos sus historias.
+    </p>
+  </div>
+  
+  
+  <div class="talent-profiles">
+    <article class="talent-profile talent-profile-featured">
+      <div class="talent-profile-featured-image">
+        <img src="imagenes/talento55.jpeg" alt="Deportista destacada de FUNDARCED con uniforme deportivo" loading="lazy" />
+        <span class="talent-featured-stamp">Talento que inspira</span>
+      </div>
+      <div class="talent-profile-copy talent-profile-featured-copy">
+        <span class="talent-profile-status">Protagonista del grupo</span>
+        <p class="talent-featured-eyebrow">Una historia para llegar más lejos</p>
+        <h5>KATHERINE NAVARRO | SELECCIÓN COLOMBIA</h5>
+        <p class="talent-featured-name">KATHERINE NAVARRO | SELECCIÓN COLOMBIA</p>
+        <p>
+          Hay sueños que comienzan compitiendo sin miedo y terminan llevando los colores de todo un país.
+
+Katherine Navarro es carácter, determinación y gol. Desde sus primeros años en Fundarced construyó su proceso deportivo compartiendo y compitiendo en grupos masculinos, escenarios en los que comenzó a marcar diferencia por su personalidad, intensidad competitiva y una capacidad goleadora que muy pronto empezó a hablar por ella. Cada entrenamiento fue fortaleciendo a una jugadora que aprendió a competir, a creer en sus capacidades y a asumir nuevos desafíos.
+
+Su camino la ha llevado a representar a Bogotá en las categorías Sub-13 y Sub-15 y posteriormente a vestir los colores de la Selección Colombia Sub-15, convirtiendo su historia en una de las grandes expresiones de lo que significa Talentos Fundarced. Katherine representa a quienes comienzan soñando desde una cancha de barrio y descubren que el lugar donde nacen los sueños no determina hasta dónde pueden llegar. Su historia todavía se está escribiendo, pero ya nos recuerda que cuando el talento encuentra carácter, disciplina y oportunidades, no existen escenarios demasiado grandes para seguir soñando.
+        </p>
+      </div>
+    </article>
+    <article class="talent-profile">
+      <img src="imagenes/talento1.jpeg" alt="JUAN ROMÁN | PÍVOT · CAT. 2005" loading="lazy" />
+      <div class="talent-profile-copy">
+        <span class="talent-profile-status">Jugador Destacado</span>
+        <h5>JUAN ROMÁN | PÍVOT · CAT. 2005
+</h5>
+        <p>Carácter para competir. Potencia para definir.
+
+Juan Román es un pívot de presencia, fortaleza y carácter. Futbolista de futsal profesional vinculado al Club D’Martin, ha construido un estilo de juego en el que su capacidad física se convierte en una herramienta para el equipo: de espaldas al arco protege, aguanta, conecta y hace jugar a sus compañeros; pero cuando logra girar y quedar de frente, aparece su esencia: el gol.
+
+Su llegada al escenario profesional representa el resultado de seguir creyendo y trabajando por una oportunidad. Juan hace parte de Talentos Fundarced porque su historia demuestra que los sueños deportivos también se construyen con carácter, sacrificio y perseverancia. Donde otros ven presión, él encuentra una oportunidad para competir.</p>
+      </div>
+    </article>
+    <article class="talent-profile">
+      <img src="imagenes/talento2.jpeg" alt="SANTIAGO GUZMAN | CIERRE - CAT. 2008." loading="lazy" />
+      <div class="talent-profile-copy">
+        <span class="talent-profile-status">Gran Liderazgo.</span>
+        <h5>SANTIAGO GUZMAN | CIERRE - CAT. 2008.</h5>
+        <p>Selección Bogotá Futsal 2026
+
+Hay jugadores que buscan ser protagonistas. Otros hacen protagonista a todo un equipo.
+
+Santiago Guzmán es inteligencia, carácter colectivo y liderazgo dentro de la cancha. Su capacidad para interpretar el juego, encontrar espacios, ubicarse y organizar le permite entender el futsal más allá de la acción individual. Es un jugador que conecta, orienta y potencia las capacidades de quienes están a su alrededor; y es precisamente esa capacidad de hacer mejores a sus compañeros la que termina convirtiéndolo en protagonista.
+
+Su proceso y participación en la Selección Bogotá de Futsal 2026 representan un nuevo paso dentro de una historia que continúa construyéndose. Santiago representa la esencia de Talentos Fundarced: comprender que crecer como deportista no significa únicamente destacar individualmente, sino aprender a poner tus capacidades al servicio del equipo. Porque el verdadero liderazgo también se demuestra jugando para los demás.</p>
+      </div>
+    </article>
+    <article class="talent-profile">
+      <img src="imagenes/talento3.jpg" alt="JUAN LEDESMA “WIMPY” | PORTERO · CAT. 2006" loading="lazy" />
+      <div class="talent-profile-copy">
+        <span class="talent-profile-status">ARQUERO DESTACADO</span>
+        <h5>JUAN LEDESMA “WIMPY” | PORTERO · CAT. 2006</h5>
+        <p>Jerarquía bajo los tres palos. Pasión para defender un sueño.
+
+Juan Ledesma, conocido como “Wimpy”, representa seguridad, carácter y pasión por el arco. Portero de futsal profesional y actualmente vinculado al proceso de la Universidad Sergio Arboleda, se ha caracterizado por su capacidad técnica, sus grandes reflejos y esa personalidad que necesita quien asume la responsabilidad de ser el último hombre del equipo.
+
+Su camino es una muestra de crecimiento, constancia y proyección. Cada atajada representa años de aprendizaje y un sueño que continúa construyéndose. Wimpy es Talento Fundarced porque entendió que defender un arco también significa defender con disciplina aquello que algún día soñaste alcanzar.</div>
+    </article>
+    <article class="talent-profile">
+      <img src="imagenes/salome.jpeg" alt="SALOMÉ BUITRAGO | CAT. 2012" loading="lazy" />
+      <div class="talent-profile-copy">
+        <span class="talent-profile-status">MVP-Jugadora mas valiosa</span>
+        <h5>SALOMÉ BUITRAGO | CAT. 2012.</h5>
+        <p>Selección Bogotá Futsal 2025· Campeona Nacional e Internacional
+
+Hay talentos que se reconocen por lo que hacen con el balón; otros, por la forma en que enfrentan cada desafío. Salomé tiene las dos cosas.
+
+Desde su llegada a Fundarced, Salomé Buitrago mostró ímpetu, cumplimiento, carácter y una profunda convicción por ir siempre hacia adelante. Es una jugadora que compite hasta el último momento, que entiende que un marcador adverso nunca significa dejar de intentarlo y que ha aprendido a transformar las dificultades del juego en razones para continuar. Su talento deportivo está acompañado por una cualidad que engrandece todavía más su proceso: la humildad para seguir aprendiendo, incluso después de alcanzar grandes logros.
+
+En 2025, su camino la llevó a integrar la Selección Bogotá de Fútbol Sala, participando en la Liga Evolución CONMEBOL y viviendo experiencias competitivas de nivel nacional e internacional. Con Bogotá alcanzó el título nacional en el Interligas de Colombia y posteriormente celebró un nuevo campeonato en competencia suramericana. Una trayectoria extraordinaria para una deportista que todavía tiene mucho camino por recorrer. Salomé representa Talentos Fundarced porque nos recuerda que los grandes sueños no se abandonan cuando el marcador está en contra: se defienden con carácter, se persiguen con convicción y se alcanzan sin perder la humildad.</p>
+      </div>
+    </article>
+    -->
+  </div>
+</section>
+<p class="talent-gallery-label">Momentos del proceso deportivo</p>
+<div class="program-gallery" aria-label="Galería del programa Talentos FUNDARCED">
+              <img src="imagenes/talento1.jpeg" alt="Talento deportivo de FUNDARCED" loading="lazy" />
+              <img src="imagenes/talento2.jpeg" alt="Participante del programa Talentos FUNDARCED" loading="lazy" />
+              <img src="imagenes/talento3.jpg" alt="Experiencia deportiva de un talento FUNDARCED" loading="lazy" />
+              <img src="imagenes/talento4.jpg" alt="Talentos FUNDARCED en proceso competitivo" loading="lazy" />
+              <img src="imagenes/talento5.jpg" alt="Joven talento deportivo de FUNDARCED" loading="lazy" />
+              <img src="imagenes/talento6.jpeg" alt="Talento FUNDARCED en entrenamiento deportivo" loading="lazy" />
+              <img src="imagenes/talento8.jpeg" alt="Talento deportivo de FUNDARCED en competencia" loading="lazy" />
+              <img src="imagenes/talento55.jpeg" alt="Participación competitiva de Talentos FUNDARCED" loading="lazy" />
+              <img src="imagenes/talento9.jpeg" alt="Proceso de formación de un talento FUNDARCED" loading="lazy" />
+              <img src="imagenes/talento10.jpeg" alt="Experiencia deportiva competitiva de FUNDARCED" loading="lazy" />
+              <img src="imagenes/talento12.jpeg" alt="Talento FUNDARCED en actividad deportiva" loading="lazy" />
+              <img src="imagenes/talento13.jpeg" alt="Deportista del programa Talentos FUNDARCED" loading="lazy" />
+              <img src="imagenes/talento14.jpeg" alt="Talento deportivo de FUNDARCED" loading="lazy" />
+              <img src="imagenes/talento15.jpeg" alt="Participante del programa Talentos FUNDARCED" loading="lazy" />
+              <img src="imagenes/talento23.jpg" alt="Talento FUNDARCED en proceso deportivo" loading="lazy" />
             </div>
-            <a class="program-action talent-action" href="https://api.whatsapp.com/send?phone=573156163391&amp;text=Hola%20FUNDARCED%2C%20me%20interesa%20conocer%20el%20programa%20premium%20Talentos%20FUNDARCED." target="_blank" rel="noopener">Quiero conocer Talentos FUNDARCED <span aria-hidden="true">↗</span></a>
+            <a class="program-action talent-action" data-i18n-wa="program-talents" href="https://api.whatsapp.com/send?phone=573156163391&amp;text=Hola%20FUNDARCED%2C%20me%20interesa%20conocer%20el%20programa%20premium%20Talentos%20FUNDARCED." target="_blank" rel="noopener">Quiero conocer Talentos FUNDARCED <span aria-hidden="true">↗</span></a>
           </article>
         </div>
       </section>
@@ -346,7 +531,7 @@
         <div class="container donation-wrap reveal">
           <div class="donation-image">
             <img
-              src="donar.png"
+              src="imagenes/donar.png"
               alt="Familia recibiendo ayudas de FUNDARCED"
               loading="lazy"
             />
@@ -354,33 +539,32 @@
           </div>
           <div class="donation-copy">
             <p class="eyebrow donation-eyebrow">DONA AQUÍ</p>
-            <h2>Ayúdanos a transformar vidas.</h2>
+            <h2>Ayúdanos a llevar FUNDARCED más lejos.</h2>
             <p>
-              Cada donación ayuda a sostener nuestros procesos deportivos, culturales,
-              educativos y sociales. Escríbenos directamente para conocer el proceso,
-              los medios de pago disponibles y recibir la orientación que necesitas.
+              Tu aporte ayuda a sostener los procesos deportivos, culturales y educativos de nuestra comunidad y a abrir camino en nuevas localidades y ciudades. Con el apoyo de personas como tú, podemos compartir esta experiencia con más niñas, niños, jóvenes y familias, y soñar con llegar también a otros países. Cada aporte suma para que más comunidades encuentren oportunidades para crecer.
             </p>
             <a
               class="button button-primary"
-              href="https://api.whatsapp.com/send?phone=573156163391&amp;text=Hola%20FUNDARCED%2C%20quiero%20hacer%20una%20donaci%C3%B3n%20y%20conocer%20los%20medios%20de%20pago."
+              data-i18n-wa="donation-main"
+              href="https://api.whatsapp.com/send?phone=573156163391&amp;text=Hola%20FUNDARCED%2C%20quiero%20apoyar%20la%20misi%C3%B3n%20de%20llevar%20la%20fundaci%C3%B3n%20a%20m%C3%A1s%20localidades%20y%20ciudades.%20%C2%BFMe%20comparten%20c%C3%B3mo%20puedo%20donar%3F"
               target="_blank"
               rel="noopener"
-            >Quiero donar por WhatsApp <span aria-hidden="true">↗</span></a>
+            >Quiero impulsar esta misión <span aria-hidden="true">↗</span></a>
           </div>
 
           <div class="donation-card donation-card-callout">
-            <span class="donation-card-label">Información segura y personalizada</span>
-            <h3>¿Quieres apoyar nuestro trabajo?</h3>
+            <span class="donation-card-label">Tu aporte abre nuevos caminos</span>
+            <h3>Ayúdanos a llegar más lejos</h3>
             <p>
-              Envíanos un mensaje y te explicaremos paso a paso cómo realizar tu donación.
-              También podrás resolver tus preguntas antes de hacer cualquier aporte.
+              Escríbenos para conocer cómo donar y ayudarnos a llevar oportunidades, deporte y formación a más comunidades. Te orientaremos sobre los medios disponibles y responderemos tus preguntas.
             </p>
             <a
               class="button button-primary"
-              href="https://api.whatsapp.com/send?phone=573156163391&amp;text=Hola%20FUNDARCED%2C%20quiero%20donar%20y%20necesito%20m%C3%A1s%20informaci%C3%B3n%20para%20hacerlo."
+              data-i18n-wa="donation-details"
+              href="https://api.whatsapp.com/send?phone=573156163391&amp;text=Hola%20FUNDARCED%2C%20quiero%20ayudar%20a%20expandir%20la%20fundaci%C3%B3n%20y%20quisiera%20conocer%20c%C3%B3mo%20hacer%20mi%20donaci%C3%B3n."
               target="_blank"
               rel="noopener"
-            >Solicitar información por WhatsApp <span aria-hidden="true">↗</span></a>
+            >Quiero ayudar a expandir FUNDARCED <span aria-hidden="true">↗</span></a>
           </div>
         </div>
       </section>
@@ -389,7 +573,7 @@
         <div class="container feature-wrap reveal">
           <div class="feature-image">
             <img
-              src="formacion para la vida.png"
+              src="imagenes/formacion para la vida.png"
               alt="Deportistas y jóvenes que representan la formación para la vida"
             />
           </div>
@@ -420,6 +604,99 @@
         </div>
       </section>
 
+      <section class="instagram-section section" id="instagram">
+        <div class="container section-header reveal">
+          <p class="eyebrow">Nuestra comunidad en Instagram</p>
+          <h2>El día a día de FUNDARCED, contado desde el territorio.</h2>
+          <p class="section-intro">
+            En Instagram compartimos las actividades, historias y momentos de nuestra
+            comunidad. Explora nuestras historias destacadas y acompáñanos en cada proceso.
+          </p>
+        </div>
+
+        <div class="container instagram-showcase reveal">
+          <div class="instagram-profile">
+            <div class="instagram-profile-copy">
+              <span class="instagram-profile-label">Síguenos en Instagram</span>
+              <div class="instagram-handle-row">
+                <a
+                  class="instagram-logo-link"
+                  href="https://www.instagram.com/fundarced/"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Visitar Instagram de FUNDARCED (@fundarced)"
+                >
+                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <rect x="3" y="3" width="18" height="18" rx="5" />
+                    <circle cx="12" cy="12" r="4" />
+                    <circle class="instagram-logo-dot" cx="18" cy="6" r="1" />
+                  </svg>
+                </a>
+                <h3>@fundarced</h3>
+              </div>
+              <p>Deporte, cultura, lectura y comunidad: conoce de cerca todo lo que hacemos.</p>
+            </div>
+            <a
+              class="button instagram-follow-button"
+              href="https://www.instagram.com/fundarced/"
+              target="_blank"
+              rel="noopener"
+            >Visitar perfil <span aria-hidden="true">↗</span></a>
+          </div>
+          <section class="instagram-posts" aria-labelledby="instagram-posts-title">
+            <div class="instagram-posts-heading">
+              <p class="instagram-profile-label">Publicaciones de Instagram</p>
+              <h3 id="instagram-posts-title">Historias reales de nuestra comunidad</h3>
+              <p>
+                Aqui encontraras las publicaciones mas destacas y visitar nuestras publicaciones de instagram...
+              </p>
+            </div>
+            <div class="instagram-post-grid">
+              <article class="instagram-post-slot">
+                <div class="instagram-embed-frame">
+                  <blockquote
+                    class="instagram-media"
+                    data-instgrm-captioned
+                    data-instgrm-permalink="https://www.instagram.com/p/Dc8jInTFgVS/?utm_source=ig_embed&amp;utm_campaign=loading"
+                    data-instgrm-version="14"
+                  ></blockquote>
+                </div>
+                <a class="instagram-post-fallback" href="https://www.instagram.com/fundarced/" target="_blank" rel="noopener">
+                  Sigue nuestra pagina... <span aria-hidden="true">↗</span>
+                </a>
+              </article>
+              <article class="instagram-post-slot">
+                <div class="instagram-embed-frame">
+                  <blockquote
+                    class="instagram-media"
+                    data-instgrm-captioned
+                    data-instgrm-permalink="https://www.instagram.com/reel/DdrGbCrTSl0/?utm_source=ig_embed&amp;utm_campaign=loading"
+                    data-instgrm-version="14"
+                  ></blockquote>
+                </div>
+                <a class="instagram-post-fallback" href="https://www.instagram.com/fundarced/" target="_blank" rel="noopener">
+                  Sigue nuestra pagina... <span aria-hidden="true">↗</span>
+                </a>
+              </article>
+              <article class="instagram-post-slot">
+                <div class="instagram-embed-frame">
+                  <blockquote
+                    class="instagram-media"
+                    data-instgrm-captioned
+                    data-instgrm-permalink="https://www.instagram.com/reel/Dc9xE2ozfdS/?utm_source=ig_embed&amp;utm_campaign=loading"
+                    data-instgrm-version="14"
+                  ></blockquote>
+                </div>
+                <a class="instagram-post-fallback" href="https://www.instagram.com/fundarced/" target="_blank" rel="noopener">
+                  Sigue nuestra pagina... <span aria-hidden="true">↗</span>
+                </a>
+              </article>
+            </div>
+            
+          </section>
+        </div>
+      </section>
+
       <section class="video-section section" id="videos">
         <div class="container video-wrap reveal">
           <div class="video-copy">
@@ -433,15 +710,12 @@
               <a class="button button-primary" href="https://www.youtube.com/@Fundarced" target="_blank" rel="noopener">
                 Ver canal de YouTube <span aria-hidden="true">↗</span>
               </a>
-              <a class="social-link" href="https://www.instagram.com/FundarcedCol/" target="_blank" rel="noopener">
-                Instagram · @FundarcedCol
-              </a>
             </div>
           </div>
 
           <div class="video-feature">
             <div class="video-player">
-              <iframe src="https://www.youtube.com/embed/j3C612hUuzE" title="Video de FUNDARCED" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              <iframe src="https://www.youtube.com/embed/j3C612hUuzE?si=SBkpOeDahhW82374" title="Video destacado de FUNDARCED" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
             <p class="video-caption">Historias y experiencias de nuestra comunidad</p>
           </div>
@@ -450,13 +724,13 @@
         <div class="container video-grid reveal">
           <article class="video-card">
             <div class="video-player">
-              <iframe src="https://www.youtube.com/embed/9Tex6VsFeis" title="Experiencia de FUNDARCED" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              <iframe src="https://www.youtube.com/embed/9Tex6VsFeis?si=s6EAdaFR50s7m5UT" title="Experiencia de FUNDARCED" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
             <h3>Experiencias FUNDARCED</h3>
           </article>
           <article class="video-card">
             <div class="video-player">
-              <iframe src="https://www.youtube.com/embed/ihUEXsQnF7s" title="Short de FUNDARCED" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              <iframe src="https://www.youtube.com/embed/28YsZfgeNmk?si=dwX8B4IggZ93w2Wa" title="Video de FUNDARCED" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
             <h3>Un vistazo en formato Short</h3>
           </article>
@@ -466,39 +740,50 @@
       <section class="testimonials section">
         <div class="container section-header reveal">
           <p class="eyebrow">Testimonios</p>
-          <h2>Lo que la comunidad siente y vive con FUNDARCED.</h2>
+          <h2>Tu experiencia también inspira.</h2>
+          <p class="section-intro">Comparte tu experiencia con FUNDARCED y ayuda a otras personas a conocer nuestro trabajo.</p>
         </div>
 
-        <div class="container testimonial-grid">
-          <article class="quote-card reveal">
-            <p>
-              “Gracias a FUNDARCED encontré un espacio para aprender, moverme y sentirme parte de algo grande.”
-            </p>
-            <div class="author">
-              <strong>María C.</strong>
-              <span>Participante</span>
-            </div>
-          </article>
+        <div class="container testimonial-layout">
+          <form class="testimonial-form" id="testimonial-form">
+            <label>
+              Tu nombre
+              <input name="name" type="text" maxlength="60" autocomplete="name" placeholder="¿Cómo te llamas?" required />
+            </label>
+            <label>
+              Tu vínculo con FUNDARCED
+              <select name="role" required>
+                <option value="" disabled selected>Selecciona una opción</option>
+                <option value="Participante">Participante</option>
+                <option value="Familiar">Familiar</option>
+                <option value="Voluntario/a">Voluntario/a</option>
+                <option value="Entrenador/a">Entrenador/a</option>
+                <option value="Aliado/a">Aliado/a</option>
+                <option value="Otro">Otro</option>
+              </select>
+            </label>
+            <label>
+              Tu opinión
+              <textarea name="message" rows="5" minlength="10" maxlength="500" placeholder="Cuéntanos qué ha significado FUNDARCED para ti…" required></textarea>
+            </label>
+            <label class="testimonial-consent">
+              <input name="consent" type="checkbox" required />
+              <span>Autorizo que mi nombre, vínculo y opinión se publiquen en la web de FUNDARCED.</span>
+            </label>
+            <label class="testimonial-trap" aria-hidden="true">
+              No completar este campo
+              <input name="website" type="text" tabindex="-1" autocomplete="off" />
+            </label>
+            <button class="button button-primary" type="submit">Compartir mi experiencia</button>
+            <p class="testimonial-storage-note">Las opiniones se compartirán públicamente en esta sección.</p>
+            <p class="testimonial-form-status" id="testimonial-form-status" role="status" aria-live="polite"></p>
+          </form>
 
-          <article class="quote-card reveal">
-            <p>
-              “Las actividades nos ayudan a crecer en valores, disciplina y amor por la comunidad.”
-            </p>
-            <div class="author">
-              <strong>Andrés P.</strong>
-              <span>Voluntario</span>
-            </div>
-          </article>
-
-          <article class="quote-card reveal">
-            <p>
-              “Es una organización que conecta la pasión por el deporte con la necesidad de cambiar realidades.”
-            </p>
-            <div class="author">
-              <strong>Laura T.</strong>
-              <span>Comunidad</span>
-            </div>
-          </article>
+          <div class="testimonial-list-wrap">
+            <h3>Experiencias de la comunidad</h3>
+            <div class="testimonial-grid" id="testimonial-list" aria-live="polite"></div>
+            <p class="testimonial-empty" id="testimonial-empty">Cuando alguien comparta su experiencia, aparecerá aquí.</p>
+          </div>
         </div>
       </section>
 
@@ -552,19 +837,19 @@
       <div class="container footer-wrap">
         <div>
           <a href="#inicio" class="brand brand-footer">
-            <img class="brand-logo" src="logo1.jpg" alt="Logo FUNDARCED" />
+            <img class="brand-logo" src="imagenes/logo1.jpg" alt="Logo FUNDARCED" />
             <span class="brand-text">FUNDARCED</span>
           </a>
         </div>
         <div class="footer-info">
           <p>© <span id="year"></span> FUNDARCED · Formación para la Vida · Usme, Bogotá</p>
-          <p class="footer-social">Encuéntranos como <strong>@FundarcedCol</strong> · fundarcedcol.com</p>
         </div>
       </div>
     </footer>
 
     <a
       class="whatsapp-float"
+      data-i18n-wa="general"
       href="https://api.whatsapp.com/send?phone=573156163391&amp;text=Hola%20FUNDARCED%2C%20quiero%20recibir%20informaci%C3%B3n."
       target="_blank"
       rel="noopener"
@@ -597,6 +882,8 @@
       </div>
     </div>
 
-    <script src="script.js?v=gallery-1"></script>
+    <script src="i18n.js?v=multilingual-1"></script>
+    <script src="testimonials-config.js?v=1"></script>
+    <script src="script.js?v=multilingual-1"></script>
   </body>
 </html>
